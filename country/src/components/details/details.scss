@@ -1,0 +1,88 @@
+.detail-header {
+  background-color: hsl(0, 0%, 98%);
+  width: 100%;
+  height: 92vh;
+  padding: 40px 80px 0;
+  font-size: 1rem;
+  
+}
+
+.backto-countries {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: hsl(0, 0%, 98%);
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px -1px rgb(0 0 0 / 44%);
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+
+
+}
+
+.detail-country {
+  display: flex;
+  gap: 60px;
+  padding-top: 80px;
+
+  .flag-desciption {
+    background-color: red;
+    width: 580px;
+    height: 400px;
+
+  }
+
+  .country-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 15%;
+
+    .country-description {
+      h2 {
+        font-weight: 800;
+        padding-bottom: 15px;
+      }
+
+      &.litle-space {
+        padding-top: 42px;
+      }
+    }
+
+    .country-title {
+      font-weight: 600;
+      line-height: 1.9;
+    }
+
+  }
+
+  .border-countries {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+
+    p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      .country-title {
+        font-weight: 600;
+        line-height: 1.9;
+      }
+
+      .countries-around {
+        background-color: hsl(0, 0%, 98%);
+        padding: 5px 15px; 
+        box-shadow: 1px 1px 5px -1px rgb(0 0 0 / 44%);
+      }
+
+    }
+    
+  }
+
+}
+

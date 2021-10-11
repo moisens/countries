@@ -1,0 +1,28 @@
+.nav-countries {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  width: 100%;
+  color: hsl(209, 23%, 22%);
+  font-weight: 800;
+  font-size: 1.125rem;
+  box-shadow: 1px 1px 5px -1px rgb(0 0 0 / 44%);
+  z-index: 1000px;
+
+
+  .darkmode-countries {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+
+  .darky-text {
+    font-weight: 600;
+  }
+
+}
