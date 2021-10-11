@@ -1,19 +1,12 @@
 import './header.scss';
-import { FaMoon } from 'react-icons/fa';
+
 
 
 
 const Countries = () => {
   return (
     <>
-      <nav className='nav-countries'>
-        <div className='logo-countries'>Where in the world?</div>
-        <div className='darkmode-countries'>
-          <FaMoon />
-          <p className='darky-text'>Darkmode</p>
-        </div>
-      </nav>
-      <header>
+      <header className='header-container'>
         <div className='input-container'>
           <div>
             <label htmlFor="search"></label>
