@@ -1,16 +1,16 @@
 import './details.scss'
 import { FaLongArrowAltLeft } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 
 
 
 const Details = () => {
   return (
     <header className='detail-header'>
-      <div className='backto-countries'>
+      <Link className='backto-countries' to='/'>
         <FaLongArrowAltLeft className='arrow' />
         <p>Back</p>
-      </div>
+      </Link>
       <div className='detail-country'>
         <div className='flag-desciption'>
           <img src="" alt="" />
