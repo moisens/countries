@@ -1,5 +1,5 @@
 import './header.scss';
-
+import Getcountries from './Getcountries';
 
 
 
@@ -24,20 +24,7 @@ const Countries = () => {
             </select>
           </div>
         </div>
-        <section>
-          <article>
-            <div className='flag-country'>
-              <img src="" alt="" />
-            </div>
-            <div className='country-description'>
-              <h2>Germany</h2>
-              <p><span className='country-title'>Population: </span>ddd </p>
-              <p><span className='country-title'>Region: </span> </p>
-              <p><span className='country-title'>Capital: </span> </p>
-            </div>
-          </article>
-          
-        </section>
+        <Getcountries />
       </header>
     </>
   )
