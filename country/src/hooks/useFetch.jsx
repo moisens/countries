@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 
 
 const useFetch = (url) => {
-  const [data, setData] = useState([]);
+  const [countries, setCountries] = useState([]);
   const [error, setError] = useState(false);
   const [status, setStatus] = useState([]);
 
@@ -15,7 +15,7 @@ const useFetch = (url) => {
         if (!response.ok) throw new Error(`Sorry, unable to fetch data from ${url}`);
         const country = await response.json();
         setStatus('resolved');
-        setData(country);
+        setCountries(country);
       } catch (error) {
         setError(error);
         setStatus('rejected');
@@ -26,7 +26,8 @@ const useFetch = (url) => {
   }, [url]);
 
   return {
-    data,
+    countries,
+    setCountries,
     error,
     status
   }
