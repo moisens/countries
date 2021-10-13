@@ -42,17 +42,17 @@ const Countries = () => {
   const handleSearch = (e) => {
     const searchCountry = e.target.value;
     setSearchInput(searchCountry);
-    console.log(searchInput);
 
-    const newCountry = countries.filter(country => {
-      if (searchInput) {
-        Object.values(country).includes(searchInput.toLowerCase());
-        setFilterCountry(newCountry)
-      } else {
-        setFilterCountry(countries);
-      }
-    })
+    if (searchInput) {
+      const newCountry = countries.filter(country => {
+        return Object.values(country.name).join('').toLowerCase().includes(searchInput.toLowerCase());
 
+      });
+      setFilterCountry(newCountry);
+    } else {
+      setFilterCountry(countries);
+    }
+    
   }
 
   return (
@@ -73,9 +73,8 @@ const Countries = () => {
           </div>
         </div>
         <ErrorBoundary FallbackComponent={ErrorBoundaryFallBack}>
-          <Getcountries error={error} status={status} countries={countries} filterCountry={filterCountry} />
+          <Getcountries error={error} status={status} countries={countries} filterCountry={filterCountry} searchInput={searchInput} />
         </ErrorBoundary>
-        
       </header>
     </>
   )
