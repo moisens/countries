@@ -61,7 +61,7 @@ const Countries = () => {
       <header className='header-container'>
         <div className='input-container'>
         <Searchcountry handleSearch={handleSearch} searchInput={searchInput}  />
-        <Searchbyregion />
+        <Searchbyregion countries={countries} setCountries={setCountries} />
         </div>
         <ErrorBoundary FallbackComponent={ErrorBoundaryFallBack}>
           <Getcountries error={error} status={status} countries={countries} filterCountry={filterCountry} searchInput={searchInput} />
