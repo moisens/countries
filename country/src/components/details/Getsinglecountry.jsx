@@ -9,6 +9,7 @@ const Getsinglecountry = () => {
     `https://restcountries.com/v3.1/name/${name}`
   );
 
+  console.log('countries: ', countries);
   
 
   if (status === "pending")
@@ -37,7 +38,7 @@ const Getsinglecountry = () => {
               borders,
             } = country;
             return (
-              <div key={common}>
+              <div className='one-country' key={common}>
                 <div className="flag-desciption">
                   <img src={png} alt={common} title={common} />
                 </div>
@@ -90,13 +91,16 @@ const Getsinglecountry = () => {
                   <div className="border-countries">
                     <p>
                       <span className="country-title">Border Countries: </span>
-                      {borders.map((border, index) => {
+                      {borders ? borders.map((border, index) => {
                         return (
-                          <span className="countries-around" key={index}>
+                          <Link to={`/${border}`} key={index}>
+                            <span className="countries-around">
                             {border}
                           </span>
+                          </Link>
+                          
                         );
-                      })}
+                      }) : 'No borders'}
                     </p>
                   </div>
                 </div>

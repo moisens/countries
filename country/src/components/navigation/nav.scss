@@ -9,7 +9,10 @@
   font-weight: 800;
   font-size: 1.125rem;
   box-shadow: 1px 1px 5px -1px rgb(0 0 0 / 44%);
-  z-index: 1000px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 
 
   .darkmode-countries {

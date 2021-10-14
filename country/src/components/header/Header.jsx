@@ -2,6 +2,7 @@ import './header.scss';
 import Getcountries from './Getcountries';
 import useFetch from "../../hooks/useFetch";
 import Searchcountry from './Searchcountry';
+import Searchbyregion from './Getbyregion';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useState } from 'react'
 
@@ -60,17 +61,7 @@ const Countries = () => {
       <header className='header-container'>
         <div className='input-container'>
         <Searchcountry handleSearch={handleSearch} searchInput={searchInput}  />
-          <div>
-            <label htmlFor="countries"></label>
-            <select>
-              <option >Filter by region</option>
-              <option value='africa'>Africa</option>
-              <option value='america'>America</option>
-              <option value='asia'>Asia</option>
-              <option value='europe'>Europe</option>
-              <option value='oceania'>Oceania</option>
-            </select>
-          </div>
+        <Searchbyregion />
         </div>
         <ErrorBoundary FallbackComponent={ErrorBoundaryFallBack}>
           <Getcountries error={error} status={status} countries={countries} filterCountry={filterCountry} searchInput={searchInput} />

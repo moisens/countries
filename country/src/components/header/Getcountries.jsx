@@ -1,13 +1,15 @@
 import "./header.scss";
 import loadcountries from "../../assets/loadcountries.gif";
 import { Link } from "react-router-dom";
-import { FilterThiscountry, MapThiscountry } from './Iteratecountry';
+import { FilterThiscountry, MapThiscountry } from "./Iteratecountry";
 
-
-
-const Getcountries = ({ error, status, countries, filterCountry, searchInput }) => {
-  
-
+const Getcountries = ({
+  error,
+  status,
+  countries,
+  filterCountry,
+  searchInput,
+}) => {
   if (status === "pending") {
     return (
       <div className="loading">
@@ -15,7 +17,6 @@ const Getcountries = ({ error, status, countries, filterCountry, searchInput }) 
       </div>
     );
   }
-
   if (status === "rejected") throw error;
 
   return (
